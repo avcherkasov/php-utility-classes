@@ -65,14 +65,16 @@ var_dump($httpStatus->isError());
 include_once "HttpStatus.php"
 
 /*** @var HttpStatus $httpStatus **/
-$httpStatus = HttpStatus::valueOf(301)->getReasonPhrase();
+$reasonPhrase = HttpStatus::valueOf(301)->getReasonPhrase();
 // Print string(17) "Moved Permanently"
+var_dump($httpStatus);
 ```
 
 ```php
 include_once "HttpStatus.php"
 
 /*** @var HttpStatus $httpStatus **/
-$httpStatus = HttpStatus::valueOf(404)->isError();
+$isError = HttpStatus::valueOf(404)->isError();
 // Print bool(true)
+var_dump($isError);
 ```
